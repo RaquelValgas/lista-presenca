@@ -104,7 +104,7 @@ export default function App() {
               color: "#5A3E1B",
             }}
           >
-            Confirmação de Presença 🌻
+            Confirmação de Presença
           </h2>
 
           <label
@@ -168,8 +168,8 @@ export default function App() {
             }}
           >
             <option value="" disabled style={{ color: "#5A3E1B" }}>Você confirma presença?</option>
-            <option value="Sim" style={{ color: "#5A3E1B" }}>Sim 🌻</option>
-            <option value="Não" style={{ color: "#5A3E1B" }}>Não 😢</option>
+            <option value="Sim" style={{ color: "#5A3E1B" }}>Sim</option>
+            <option value="Não" style={{ color: "#5A3E1B" }}>Não</option>
           </select>
 
           <button
@@ -188,7 +188,7 @@ export default function App() {
               boxShadow: "0 6px 14px rgba(251, 212, 5, 0.35)",
             }}
           >
-            Enviar 🌻
+            Enviar
           </button>
         </form>
       </div>
