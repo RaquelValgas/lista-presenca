@@ -1,0 +1,40 @@
+<!-- Girassol SVG - copie/cole em um arquivo .svg ou direto no HTML -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 320" width="400" height="640" role="img" aria-label="Ilustração de um girassol">
+  <!-- pétalas (repetidas por rotação) -->
+  <g id="petalas" fill="#FFD24D" stroke="#E6A800" stroke-width="1">
+    <ellipse cx="100" cy="40" rx="12" ry="40" transform="rotate(0 100 80)"/>
+    <ellipse cx="100" cy="40" rx="12" ry="40" transform="rotate(22.5 100 80)"/>
+    <ellipse cx="100" cy="40" rx="12" ry="40" transform="rotate(45 100 80)"/>
+    <ellipse cx="100" cy="40" rx="12" ry="40" transform="rotate(67.5 100 80)"/>
+    <ellipse cx="100" cy="40" rx="12" ry="40" transform="rotate(90 100 80)"/>
+    <ellipse cx="100" cy="40" rx="12" ry="40" transform="rotate(112.5 100 80)"/>
+    <ellipse cx="100" cy="40" rx="12" ry="40" transform="rotate(135 100 80)"/>
+    <ellipse cx="100" cy="40" rx="12" ry="40" transform="rotate(157.5 100 80)"/>
+    <ellipse cx="100" cy="40" rx="12" ry="40" transform="rotate(180 100 80)"/>
+    <ellipse cx="100" cy="40" rx="12" ry="40" transform="rotate(202.5 100 80)"/>
+    <ellipse cx="100" cy="40" rx="12" ry="40" transform="rotate(225 100 80)"/>
+    <ellipse cx="100" cy="40" rx="12" ry="40" transform="rotate(247.5 100 80)"/>
+    <ellipse cx="100" cy="40" rx="12" ry="40" transform="rotate(270 100 80)"/>
+    <ellipse cx="100" cy="40" rx="12" ry="40" transform="rotate(292.5 100 80)"/>
+    <ellipse cx="100" cy="40" rx="12" ry="40" transform="rotate(315 100 80)"/>
+    <ellipse cx="100" cy="40" rx="12" ry="40" transform="rotate(337.5 100 80)"/>
+  </g>
+
+  <!-- centro do girassol -->
+  <g id="centro">
+    <circle cx="100" cy="80" r="28" fill="#6B3E16" />
+    <circle cx="100" cy="80" r="12" fill="#8B5A2B" />
+  </g>
+
+  <!-- haste -->
+  <path d="M100 108 C98 150, 98 220, 100 280" stroke="#2E7D32" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+  <!-- folhas -->
+  <path d="M92 160 C60 150, 40 180, 70 190 C90 197, 95 180, 92 160"
+        fill="#3FA34D" stroke="#2E7D32" stroke-width="1"/>
+  <path d="M108 200 C140 190, 160 220, 130 230 C110 236, 105 220, 108 200"
+        fill="#3FA34D" stroke="#2E7D32" stroke-width="1"/>
+
+  <!-- pequena sombra no fundo do centro para profundidade -->
+  <ellipse cx="100" cy="90" rx="22" ry="6" fill="#000" opacity="0.06"/>
+</svg>

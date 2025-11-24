@@ -61,10 +61,14 @@ export default function App() {
           opacity: 0.7;
         }
 
-        /* Quando uma opção válida é selecionada */
         select {
           color: #5A3E1B; /* marrom girassol */
         }
+        
+        ::placeholder {
+          color: #5A3E1B;
+          opacity: 1; /* garante que a cor não fique transparente */
+        } 
       `}
       </style>
 
