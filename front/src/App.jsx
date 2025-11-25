@@ -90,6 +90,17 @@ export default function App() {
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
         }
+
+        .lembrete {
+          background: #FFF3CD;
+          color: #856404;
+          border: 2px solid #FFEeba;
+          border-radius: 10px;
+          padding: 12px 16px;
+          margin-bottom: 20px;
+          font-weight: bold;
+          text-align: center;
+        }
       `}
       </style>
 
@@ -117,6 +128,10 @@ export default function App() {
             boxShadow: "0 8px 22px rgba(251, 212, 5, 0.35)",
           }}
         >
+          <div className="lembrete">
+            Se for consumir bebida alcoólica, por favor leve a sua!
+          </div>
+
           <h2
             style={{
               fontSize: 24,
