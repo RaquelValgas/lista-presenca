@@ -3,9 +3,11 @@ import { useState } from "react";
 export default function App() {
   const [nome, setNome] = useState("");
   const [presenca, setPresenca] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const url = "https://script.google.com/macros/s/AKfycbzbued9h8DRnHEDKI1N71PQZAxxUAcQN5fN2dyfZw4HBRh_UoD5ugHCjYK9aFZmo9yxLQ/exec";
 
@@ -31,6 +33,8 @@ export default function App() {
     } catch (err) {
       alert("Erro ao enviar.");
       console.error(err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -69,6 +73,23 @@ export default function App() {
           color: #5A3E1B;
           opacity: 1; /* garante que a cor não fique transparente */
         } 
+
+        .spinner {
+          border: 3px solid #f3f3f3; /* fundo do spinner */
+          border-top: 3px solid #5A3E1B; /* cor do topo */
+          border-radius: 50%;
+          width: 18px;
+          height: 18px;
+          animation: spin 1s linear infinite;
+          display: inline-block;
+          margin-left: 8px;
+          vertical-align: middle;
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
       `}
       </style>
 
@@ -174,6 +195,7 @@ export default function App() {
 
           <button
             type="submit"
+            disabled={loading}
             style={{
               width: "100%",
               padding: 12,
@@ -188,7 +210,15 @@ export default function App() {
               boxShadow: "0 6px 14px rgba(251, 212, 5, 0.35)",
             }}
           >
-            Enviar
+            {loading ? (
+              <>
+                Enviando
+                {" "}
+                <span className="spinner"></span>
+              </>
+            ) : (
+              "Enviar"
+            )}
           </button>
         </form>
       </div>
